@@ -1,0 +1,107 @@
+.navbar {
+  width: 100%;
+ 
+  background-color: #191919; 
+  display: flex;
+  justify-content: center; 
+}
+
+.nav_container {
+  width: 100%;
+  max-width: 1400px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem; 
+  box-sizing: border-box;
+  height: 82px; 
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  top: 10%; 
+  left: 85%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 2000;
+}
+
+.tooltipWrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 28px;
+  object-fit: contain;
+}
+
+.iconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.profileCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iconsWrapper {
+    gap: 0.7rem;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .profileCircle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav_container {
+    padding: 0 0.5rem;
+  }
+  .logo {
+    height: 24px;
+  }
+}
